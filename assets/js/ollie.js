@@ -33,7 +33,7 @@ $(document).ready(function(){
 });
 
 // portfolio carousel
-$('#owl-portfolio').owlCarousel({
+$('.owl-portfolio').owlCarousel({
     margin:30,
     dots: false,
     responsiveClass:true,
@@ -55,7 +55,7 @@ $('#owl-portfolio').owlCarousel({
 });
 
 // testmonial carousel
-$('#owl-testmonial').owlCarousel({
+$('.owl-testmonial').owlCarousel({
     center: true,
     items:1,
     loop:true,
