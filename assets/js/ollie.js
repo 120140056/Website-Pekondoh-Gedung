@@ -30,6 +30,14 @@ $(document).ready(function(){
             });
         } 
     });
+
+    $('#owl-testmonial').owlCarousel({
+        center: true,
+        items:1,
+        loop:true,
+        nav: true,
+        dots: false
+    });
 });
 
 // portfolio carousel
@@ -61,4 +69,4 @@ $('#owl-testmonial').owlCarousel({
     loop:true,
     nav: true,
     dots: false
-})
+});
