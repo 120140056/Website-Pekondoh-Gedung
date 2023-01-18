@@ -61,4 +61,4 @@ $('#owl-testmonial').owlCarousel({
     loop:true,
     nav: true,
     dots: false
-})
+});
