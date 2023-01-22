@@ -47,17 +47,10 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  display: flex;
-  padding: 0 35px;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -11724,10 +11717,9 @@ pre .code {
 }
 
 .slider-container {
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 80%;
   height: 300px;
   overflow: hidden;
