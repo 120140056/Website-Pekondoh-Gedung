@@ -196,7 +196,7 @@
         </div>
 
         <div class="slider-container">
-            <div class="slider">
+            <div class="slider" id="imageslide" style="left: 0px;">
                 <div class="slider-item">
                     <img src="assets/imgs/masjid induk 1.jpeg" alt="masjid">
                 </div>
@@ -231,11 +231,11 @@
                     <img src="assets/imgs/sawah 2.jpeg" alt="sawah">
                 </div>
             </div>
-        </div>
+        </div><br>
 
         <center>
-            <button class="btn btn-primary circle"><i class="ti-heart"></i></button>
-            <button class="btn btn-primary circle"><i class="ti-heart"></i></button>
+            <button class="btn btn-primary circle" onclick="move_img('left')" value="left"><i class="ti-angle-left"></i></button>
+            <button class="btn btn-primary circle" onclick="move_img('right')" value="right"><i class="ti-angle-right"></i></button>
         </center>
 
         <script>
@@ -282,6 +282,30 @@
                     slider.style.left = `-${sliderIn.width - sliderContainerOut.width}px`
                 }
             }
+            function move_img(str) {
+                var step=150; // change this to different step value
+                switch(str){
+                    case "left":
+                        var y=document.getElementById('imageslide').offsetLeft;
+                        y= y + step;
+                        if (y > 0) {
+                            document.getElementById('imageslide').style.left= "0px";
+                        } else {
+                            document.getElementById('imageslide').style.left= y + "px";
+                        }
+                        break;
+
+                    case "right":
+                        var y=document.getElementById('imageslide').offsetLeft;
+                        y= y - step;
+                        if (y < -2965) {
+                            document.getElementById('imageslide').style.left= "-2965px";
+                        } else {
+                            document.getElementById('imageslide').style.left= y + "px";
+                        }
+                        break;
+                }
+            }
         </script>
     </section>
 
@@ -319,44 +343,44 @@
                     <table class="table table-bordered">
                         <tbody>
                             <tr>
-                            <th scope="row">Kode PUM</th>
-                            <td>1809042004</td>
+                                <th scope="row">Kode PUM</th>
+                                <td>1809042004</td>
                             </tr>
                             <tr>
-                            <th scope="row">Tahun Pembentukan</th>
-                            <td>1967</td>
+                                <th scope="row">Tahun Pembentukan</th>
+                                <td>1967</td>
                             </tr>
                             <tr>
-                            <th scope="row">Topologi</th>
-                            <td>Pertanian &amp; Perkebunan</td>
+                                <th scope="row">Topologi</th>
+                                <td>Pertanian &amp; Perkebunan</td>
                             </tr>
                             <tr>
-                            <th scope="row">Klasifikasi</th>
-                            <td>Swakarya</td>
+                                <th scope="row">Klasifikasi</th>
+                                <td>Swakarya</td>
                             </tr>
                             <tr>
-                            <th scope="row">Kategori</th>
-                            <td>Mula</td>
+                                <th scope="row">Kategori</th>
+                                <td>Mula</td>
                             </tr>
                             <tr>
-                            <th scope="row">Luas Wilayah</th>
-                            <td>175 ha</td>
+                                <th scope="row">Luas Wilayah</th>
+                                <td>175 ha</td>
                             </tr>
                             <tr>
-                            <th scope="row">Batas Sebelah Utara</th>
-                            <td>Desa Tanjung Agung</td>
+                                <th scope="row">Batas Sebelah Utara</th>
+                                <td>Desa Tanjung Agung</td>
                             </tr>
                             <tr>
-                            <th scope="row">Batas Sebelah Selatan</th>
-                            <td>Desa Paguyuban</td>
+                                <th scope="row">Batas Sebelah Selatan</th>
+                                <td>Desa Paguyuban</td>
                             </tr>
                             <tr>
-                            <th scope="row">Batas Sebelah Timur</th>
-                            <td>Desa Banjar Negeri</td>
+                                <th scope="row">Batas Sebelah Timur</th>
+                                <td>Desa Banjar Negeri</td>
                             </tr>
                             <tr>
-                            <th scope="row">Batas Sebelah Barat</th>
-                            <td>Desa Pekondoh</td>
+                                <th scope="row">Batas Sebelah Barat</th>
+                                <td>Desa Pekondoh</td>
                             </tr>
                         </tbody>
                     </table>
@@ -408,36 +432,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="txt-wrapper">
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
                             <th scope="row">Alamat</th>
-                            <td>H2HQ+VXW, Pekondoh Gedung, Way Lima, Kabupaten Pesawaran, Lampung</td>
-                            </tr>
-                            <tr>
+                            <td>Jl. Raya Kedondong, Desa Pekondoh Gedung, Way Lima</td>
+                        </tr>
+                        <tr>
                             <th scope="row">Kode Pos</th>
                             <td>35367</td>
-                            </tr>
-                            <tr>
+                        </tr>
+                        <tr>
                             <th scope="row">No. Telp</th>
                             <td>+62 813-7973-4357</td>
-                            </tr>
-                            <tr>
+                        </tr>
+                        <tr>
                             <th scope="row">Fax</th>
                             <td>N/A</td>
-                            </tr>
-                            <tr>
+                        </tr>
+                        <tr>
                             <th scope="row">Email</th>
                             <td>pekondohgedung17@gmail.com</td>
-                            </tr>
-                            <tr>
+                        </tr>
+                        <tr>
                             <th scope="row">Website</th>
                             <td>pekondohgedung.christian120140.repl.co</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
